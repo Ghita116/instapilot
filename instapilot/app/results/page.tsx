@@ -1,10 +1,9 @@
-import Link from "next/link"
-import { ArrowLeft, BarChart2, Compass, Instagram, MessageSquare, ThumbsUp } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator"
+import Link from "next/link"
+import { ArrowLeft, BarChart2, Compass, Instagram, MessageSquare, ThumbsUp } from "lucide-react"
 
 export default function ResultsPage() {
   return (
@@ -12,11 +11,10 @@ export default function ResultsPage() {
       <div className="container mx-auto px-4 py-8">
         <header className="flex justify-between items-center py-6">
           <div className="flex items-center gap-2">
-            <Instagram className="h-6 w-6" />
+            <img src="/instagram-icon.png" alt="Instagram Icon" className="h-6 w-6" />
             <h1 className="text-xl font-medium tracking-tight">InstaPilot</h1>
           </div>
           <Button
-            variant="outline"
             className="text-sm border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700"
           >
             Sign in
@@ -24,7 +22,9 @@ export default function ResultsPage() {
         </header>
 
         <div className="py-4">
-          <Button variant="ghost" size="sm" className="text-zinc-400" asChild>
+          <Button 
+            className="text-zinc-400 text-sm"
+          >
             <Link href="/">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to home
